@@ -15,7 +15,7 @@ use App\Http\Controllers\backend\PenggunaController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.template');
 });
 
 Route::get('/dashboard', function () {
