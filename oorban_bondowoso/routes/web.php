@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\backend\PenggunaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,18 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('layouts.index');
+    return view('admin');
 })->middleware(['auth'])->name('dashboard');
+
+Route::resource('pengguna', 'backend\PenggunaController');
+
+Route::middleware(['auth'])->group(function (){
+    Route::prefix('dashboard/admin')->group(function (){
+    //route pengguna
+    Route::resource('pengguna', Backend\PenggunaController::class, ['names' =>[
+        'index' => 'pengguna'
+    ]]);
+    });
+});
 
 require __DIR__.'/auth.php';
