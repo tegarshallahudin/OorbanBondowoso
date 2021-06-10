@@ -16,12 +16,12 @@
     <!-- ===============================================-->
     <!--    Favicons-->
     <!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('frontend/public/assets/img/favicons/logo.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('frontend/public/assets/img/favicons/logo.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('frontend/public/assets/img/favicons/logo.png') }}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/public/assets/img/favicons/logo.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('frontend/public/assets/img/favicons/logo12.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('frontend/public/assets/img/favicons/logo12.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('frontend/public/assets/img/favicons/logo12.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/public/assets/img/favicons/logo12.png') }}">
     <link rel="manifest" href="{{ asset('frontend/public/assets/img/favicons/manifest.json') }}">
-    <meta name="msapplication-TileImage" content="{{ asset('frontend/public/assets/img/favicons/logo.png') }}">
+    <meta name="msapplication-TileImage" content="{{ asset('frontend/public/assets/img/favicons/logo12.png') }}">
     <meta name="theme-color" content="#ffffff">
 
 
@@ -57,7 +57,7 @@
         </div>
       </nav>
       <section id="home">
-        <div class="bg-holder d-none d-md-block bg-size" style="background-image:url({{ asset('frontend/public/assets/img/illustrations/ilus.png') }});background-position:right bottom;">
+        <div class="bg-holder d-none d-md-block bg-size" style="background-image:url({{ asset('frontend/public/assets/img/illustrations/vektor2.png') }});background-position:right bottom;">
         </div>
         <!--/.bg-holder-->
 
@@ -103,7 +103,7 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-7 col-xxl-5 mx-auto text-center py-7">
-              <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">Perbaikan</h5>
+              <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">Pusat servis</h5>
               <p class="mb-0">Klean is an elegant HTML5 template and a perfect starting point for your next SaaS oriented site, carefully curated by <span class="fw-bold">ThemeWagon</span></p>
             </div>
           </div>
@@ -119,7 +119,7 @@
                     <div class="text-center"><img class="my-5" src="{{ asset('frontend/public/assets/img/icons/text.png') }}" width="100" alt="services" />
                       <div class="card-body text-center text-md-start">
                         <h6 class="fw-bold fs-1">Send Texts Instantly</h6>
-                        <p class="mt-3 mb-md-0 mb-lg-3">Manage costs, build forecasts, and adapt quickly as demand and budgets change.</p><a class="btn btn-lg ps-0 pe-3 text-primary" href="#" role="button">Learn more
+                        <p class="mt-3 mb-md-0 mb-lg-3">Manage costs, build forecasts, and adapt quickly as demand and budgets change.</p><a class="btn btn-lg ps-0 pe-3 text-primary" href="#" role="button">Telusuri
                           <svg class="bi bi-arrow-right-short" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                           </svg></a>
@@ -132,7 +132,7 @@
                     <div class="text-center"><img class="my-5" src="{{ asset('frontend/public/assets/img/icons/organized.png') }}" width="100" alt="services" />
                       <div class="card-body text-center text-md-start">
                         <h6 class="fw-bold fs-1">University Admissions</h6>
-                        <p class="mt-3 mb-md-0 mb-lg-3">Modern tools, certified HR advisors, and expert guides to help you stay compliant.</p><a class="btn btn-lg ps-0 pe-3 text-primary" href="#" role="button">Learn more
+                        <p class="mt-3 mb-md-0 mb-lg-3">Modern tools, certified HR advisors, and expert guides to help you stay compliant.</p><a class="btn btn-lg ps-0 pe-3 text-primary" href="#" role="button">Telusuri
                           <svg class="bi bi-arrow-right-short" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                           </svg></a>
@@ -145,7 +145,7 @@
                     <div class="text-center"><img class="my-5" src="{{ asset('frontend/public/assets/img/icons/statistics.png') }}" width="100" alt="services" />
                       <div class="card-body text-center text-md-start">
                         <h6 class="fw-bold fs-1">Visa Consultancy</h6>
-                        <p class="mt-3 mb-md-0 mb-lg-3">Get your team in sync with messages, real-time alerts, reminders, and more.</p><a class="btn btn-lg ps-0 pe-3 text-primary" href="#" role="button">Learn more
+                        <p class="mt-3 mb-md-0 mb-lg-3">Get your team in sync with messages, real-time alerts, reminders, and more.</p><a class="btn btn-lg ps-0 pe-3 text-primary" href="#" role="button">Telusuri
                           <svg class="bi bi-arrow-right-short" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                           </svg></a>
