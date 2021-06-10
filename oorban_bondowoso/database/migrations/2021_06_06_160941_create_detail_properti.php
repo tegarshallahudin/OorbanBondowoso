@@ -16,16 +16,17 @@ class CreateDetailProperti extends Migration
         Schema::create('detail_properti', function (Blueprint $table) {
             $table->id();
             $table->string('nama_pemilik', 50);
-            $table->tinyInteger('umur_bangunan');
+            $table->bigInteger('umur_bangunan');
             $table->string('harga', 12);
-            $table->tinyInteger('jml_kamartidur');
-            $table->tinyInteger('jml_kamarmandi');
-            $table->tinyInteger('luas_tanah');
-            $table->tinyInteger('luas_bangunan');
-            $table->tinyInteger('lantai');
-            $table->tinyInteger('daya_listrik');
-            $table->tinyInteger('tahun_dibangun');
-            $table->tinyInteger('keterangan');
+            $table->bigInteger('jml_kamartidur');
+            $table->bigInteger('jml_kamarmandi');
+            $table->bigInteger('luas_tanah');
+            $table->bigInteger('luas_bangunan');
+            $table->bigInteger('lantai');
+            $table->bigInteger('daya_listrik');
+            $table->bigInteger('tahun_dibangun');
+            $table->bigInteger('keterangan');
+            $table->text('gambar');
             $table->enum('sertifikat',['SHM','SHGB','AJB']);
             $table->timestamps();
         });

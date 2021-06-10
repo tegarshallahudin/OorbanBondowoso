@@ -44,7 +44,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6 col-xs-12">
                     <div class="white-box analytics-info">
-                        <h3 class="box-title">Trasnsaksi</h3>
+                        <h3 class="box-title">Transaksi</h3>
                         <ul class="list-inline two-part">
                             <li>
                                 <div id="sparklinedash3"></div>

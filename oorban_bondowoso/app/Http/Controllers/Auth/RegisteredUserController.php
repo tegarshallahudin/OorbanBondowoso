@@ -35,14 +35,28 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
+            // 'username' => 'required|string|max:30',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ]);
+            // 'alamat' => 'required|string',
+            // 'no_hp' => 'required|max:13',
+            // 'level' => 'required',
+        ],
+        // [
+        //     'required' => 'Data Harus Terisi',
+        //     'name.max' => 'Data tidak boleh lebih dari 255 karakter',
+        //     'username.max' => 'Data tidak boleh lebih dari 30 karakter',
+        //     'no_hp.max' => 'Data tidak boleh lebih dari 13 karakter'
+        // ]
+        );
 
         $user = User::create([
             'name' => $request->name,
+            // 'username' => $request->username,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            // 'alamat' => $request->alamat,
+            // 'no_hp' => $request->no_hp,
         ]);
 
         event(new Registered($user));
