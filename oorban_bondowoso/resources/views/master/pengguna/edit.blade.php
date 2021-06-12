@@ -1,5 +1,106 @@
 @extends('layouts.template')
-<div id="page-wrapper">
+
+@section('content')
+<div class="main-content">
+    <section class="section">
+      <h1 class="section-header">
+        <div> {{ $title }} </div>
+      </h1>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12 col-sm-12">
+                <form method="POST" action=" {{ route('pengguna.update', $pengguna->id) }} " class="needs-validation" novalidate="">
+                @csrf
+                @method('PUT')
+                <div class="card">
+                    <div class="card-header">
+                    {{-- <h4>Q</h4> --}}
+                        </div>
+                        <div class="card-body">
+                        <div class="form-group">
+                            <label>Nama Pengguna</label>
+                            <input type="text" name="nama" id="nama" value=" {{ $pengguna->name }} " class="form-control  @error('nama') is-invalid @enderror" autofocus >
+                            <span class="text-muted" style="font-size: 12px">Masukkan Nama Pengguna</span>
+                            @if ($errors->has('nama'))
+                                <div class="invalid-feedback">
+                                {{ $errors->first('nama') }}
+                                </div>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input type="text" name="username" id="username" value="{{ $pengguna->username }}" class="form-control  @error('username') is-invalid @enderror" autofocus >
+                            <span class="text-muted" style="font-size: 12px">Masukkan Username anda</span>
+                            @if ($errors->has('username'))
+                                <div class="invalid-feedback">
+                                {{ $errors->first('username') }}
+                                </div>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" id="password" name="password" value=""  placeholder="Masukkan password" class="form-control form-control-line @error('password') is-invalid @enderror">
+                            @if ($errors->has('password'))
+                                <span class="badge badge-danger">{{ $errors->first('password') }}</span>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <label>Alamat</label>
+                            <textarea name="alamat" id="alamat" class="form-control @error('alamat') is-invalid @enderror" cols="0" rows="10"> {{ $pengguna->alamat }} </textarea>
+                            <span class="text-muted" style="font-size: 12px">Masukkan Alamat dengan benar</span>
+                            @if ($errors->has('alamat'))
+                                <div class="invalid-feedback">
+                                {{ $errors->first('alamat') }}
+                                </div>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <label>No. Handphone</label>
+                            <input type="text" name="no_hp" id="no_hp" value=" {{ $pengguna->no_hp }} " class="form-control  @error('no_hp') is-invalid @enderror" autofocus >
+                            <span class="text-muted" style="font-size: 12px">Masukkan No. Handphone dengan benar</span>
+                            @if ($errors->has('no_hp'))
+                                <div class="invalid-feedback">
+                                {{ $errors->first('no_hp') }}
+                                </div>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="email" id="email" value=" {{ $pengguna->email }} " class="form-control  @error('email') is-invalid @enderror">
+                            <span class="text-muted" style="font-size: 12px">Masukkan email dengan benar</span>
+                            @if ($errors->has('email'))
+                                <div class="invalid-feedback">
+                                {{ $errors->first('email') }}
+                                </div>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <label>Level Akses</label>
+                            <select id="level" name="level" class="form-control form-control-line @error('level') is-invalid @enderror">
+                                <option value="0">Pilih Level Anda</option>
+                                <option value="super_admin" {{ $pengguna->level == 'super_admin' ? 'selected' : '' }} >Super Admin</option>
+                                <option value="admin" {{ $pengguna->level == 'admin' ? 'selected' : '' }}>Admin</option>
+                            </select>
+                            @if ($errors->has('level'))
+                                <span class="badge badge-danger">{{ $errors->first('level') }}</span>
+                            @endif
+                        </div>
+                        {{-- <div class="form-group">
+                            <label>Content</label>
+                            <textarea class="summernote-simple"></textarea>
+                        </div> --}}
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary" type="submit">Simpan</button>
+                        <button type="reset" class="btn btn-outline-secondary">Reset</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+@endsection
+{{-- <div id="page-wrapper">
     <div class="container-fluid">
         <div class="row bg-title">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
@@ -94,4 +195,4 @@
     </div>
     <!-- /.container-fluid -->
     <footer class="footer text-center"> 2017 &copy; Ample Admin brought to you by wrappixel.com </footer>
-</div>
+</div> --}}

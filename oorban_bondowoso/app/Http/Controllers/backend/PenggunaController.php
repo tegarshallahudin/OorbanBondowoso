@@ -5,6 +5,7 @@ namespace App\Http\Controllers\backend;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class PenggunaController extends Controller
 {
@@ -13,11 +14,12 @@ class PenggunaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public $param;
     public function index()
     {
         $pengguna = User::all();
-
-        return view('master.pengguna.index')->with('pengguna', $pengguna);
+        $this->param['title'] = 'Pengguna';
+        return view('master.pengguna.index', $this->param)->with('pengguna', $pengguna);
     }
 
     /**
@@ -27,7 +29,8 @@ class PenggunaController extends Controller
      */
     public function create()
     {
-        return view('master.pengguna.create');
+        $this->param['title'] = 'Tambah Data Pengguna';
+        return view('master.pengguna.create', $this->param);
     }
 
     /**
@@ -41,7 +44,7 @@ class PenggunaController extends Controller
         $pengguna= new User;
         $pengguna->name=$request->get('nama');
         $pengguna->username=$request->get('username');
-        $pengguna->password=\Hash::make($request->get('password'));
+        $pengguna->password= Hash::make($request->get('password'));
         $pengguna->alamat=$request->get('alamat');
         $pengguna->no_hp=$request->get('no_hp');
         $pengguna->email=$request->get('email');
@@ -69,9 +72,10 @@ class PenggunaController extends Controller
      */
     public function edit($id)
     {
+        $this->param['title'] = 'Edit Data Pengguna';
         $pengguna = User::where('id', $id)->first();
 
-	    return view('master.pengguna.edit')->with('pengguna', $pengguna);
+	    return view('master.pengguna.edit', $this->param)->with('pengguna', $pengguna);
     }
 
     /**
@@ -83,12 +87,28 @@ class PenggunaController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'password' => 'required'
+        ],
+        [
+            'required' => ':attribute Harus Terisi',
+        ],
+        [
+            'password' => 'Password Pengguna'
+        ]);
+        // $data = "Data";
+        // if ($request->password == null) {
+        //   return $data;
+        // }else{
+        //     echo "data adata";
+        // }
         $pengguna = User::find($id);
         $pengguna->name=$request->get('nama');
         $pengguna->username=$request->get('username');
-        $pengguna->password=\Hash::make($request->get('password'));
+        //
         $pengguna->alamat=$request->get('alamat');
         $pengguna->no_hp=$request->get('no_hp');
+        $pengguna->password=Hash::make($request->password);
         $pengguna->email=$request->get('email');
         $pengguna->level=$request->get('level');
         $pengguna->save();

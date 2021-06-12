@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Detail_properti;
+use App\Models\Tabel_transaksi;
 use Illuminate\Http\Request;
 
 class TransaksiController extends Controller
@@ -14,7 +16,11 @@ class TransaksiController extends Controller
      */
     public function index()
     {
-        return view('master.transaksi.index');
+        $this->param['title'] = "Data Transaksi";
+
+        $properti = Tabel_transaksi::all();
+
+        return view('master.transaksi.index', $this->param)->with('tabel_transaksi', $properti);
     }
 
     /**
@@ -24,7 +30,9 @@ class TransaksiController extends Controller
      */
     public function create()
     {
-        return view('master.transaksi.create');
+        $this->param['title'] = "Tambah Data";
+        $this->param['data_properti'] = Detail_properti::all();
+        return view('master.transaksi.create', $this->param);
     }
 
     /**
@@ -35,7 +43,15 @@ class TransaksiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $transaksi= Detail_transaksi::find($id);
+        $transaksi->kode_transkasi=$request->get('kode_transaksi');
+        $transaksi->id_properti=$request->get('id_properti');
+        $transaksi->id_pengguna_android=$request->get('id_pengguna_android');
+        $transaksi->id_pengguna=$request->get('id_pengguna');
+        $transaksi->total_bayar=$request->get('total_bayar');
+        $transaksi->kembalian=$request->get('kembalian');
+        $transaksi->save();
+        return redirect('dashboard/master/transaksi')->with('success','Data berhasil di masukkan');
     }
 
     /**
@@ -57,7 +73,9 @@ class TransaksiController extends Controller
      */
     public function edit($id)
     {
-        //
+        $tabel_transaksi = Tabel_transaksi::where('id', $id)->first();
+
+	    return view('master.transaksi.edit')->with('transaksi', $tabel_transaksi);
     }
 
     /**
@@ -69,7 +87,15 @@ class TransaksiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $transaksi= Detail_transaksi::find($id);
+        $transaksi->kode_transkasi=$request->get('kode_transaksi');
+        $transaksi->id_properti=$request->get('id_properti');
+        $transaksi->id_pengguna_android=$request->get('id_pengguna_android');
+        $transaksi->id_pengguna=$request->get('id_pengguna');
+        $transaksi->total_bayar=$request->get('total_bayar');
+        $transaksi->kembalian=$request->get('kembalian');
+        $transaksi->save();
+        return redirect('dashboard/master/transaksi')->with('success','Data berhasil diedit');
     }
 
     /**
@@ -80,6 +106,8 @@ class TransaksiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $transaksi = Tabel_transaksi::findOrFail($id);
+        $transaksi->delete();
+	    return redirect('dashboard/master/transaksi')->with('danger','Data berhasil dihapus');
     }
 }

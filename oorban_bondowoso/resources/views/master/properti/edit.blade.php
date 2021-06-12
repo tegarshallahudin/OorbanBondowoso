@@ -1,25 +1,19 @@
 @extends('layouts.template')
-<div id="page-wrapper">
-    <div class="container-fluid">
-        <div class="row bg-title">
-            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                <h4 class="page-title">Tambah Data</h4> </div>
-            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                <ol class="breadcrumb">
-                    <li><a href="#">Dashboard</a></li>
-                    <li class="active">Properti</li>
-                    <li class="active">Tambah Data</li>
-                </ol>
-            </div>
-        </div>
-        <!-- /.row -->
-        <!-- .row -->
+@section('content')
+<div class="main-content">
+    <section class="section">
+      <h1 class="section-header">
+        <div> {{ $title }} </div>
+      </h1>
         <div class="row">
-            <div class="col-md-8 col-xs-12">
-                <div class="white-box">
-                    <form class="form-horizontal form-material" action="{{ route('properti.update', $properti->id) }}" method="POST" enctype="multipart/form-data">
+            <div class="col-lg-12 col-md-12 col-12 col-sm-12">
+                <form method="POST" action=" {{ route('properti.update', $properti->id) }} " enctype="multipart/form-data" class="needs-validation" novalidate="">
                     @csrf
                     @method('PUT')
+                <div class="card">
+                    <div class="card-header">
+                    {{-- <h4>Q</h4> --}}
+                        </div>
                         <div class="form-group">
                             <label class="col-md-12">Nama Properti</label>
                             <div class="col-md-12">
@@ -131,18 +125,18 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="form-group">
-                            <div class="col-sm-12">
-                                <button class="btn btn-success" type="submit">Simpan</button>
-                                <button class="btn btn-danger" type="reset">Reset</button>
-                            </div>
-                        </div>
-                    </form>
+                        {{-- <div class="form-group">
+                            <label>Content</label>
+                            <textarea class="summernote-simple"></textarea>
+                        </div> --}}
+                    <div class="card-footer">
+                        <button class="btn btn-primary" type="submit">Simpan</button>
+                        <button type="reset" class="btn btn-outline-secondary">Reset</button>
+                    </div>
                 </div>
+                </form>
             </div>
         </div>
-        <!-- /.row -->
-    </div>
-    <!-- /.container-fluid -->
-    <footer class="footer text-center"> 2017 &copy; Ample Admin brought to you by wrappixel.com </footer>
+    </section>
 </div>
+@endsection

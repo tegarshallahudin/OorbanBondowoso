@@ -1,5 +1,107 @@
 @extends('layouts.template')
-<div id="page-wrapper">
+@section('content')
+<div class="main-content">
+    <section class="section">
+      <h1 class="section-header">
+        <div> {{ $title }} </div>
+      </h1>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12 col-sm-12">
+                <form method="POST" action=" {{ route('pengguna.store') }} " class="needs-validation" novalidate="">
+                @csrf
+                <div class="card">
+                    <div class="card-header">
+                    {{-- <h4>Q</h4> --}}
+                        </div>
+                        <div class="card-body">
+                        <div class="form-group">
+                            <label>Nama Pengguna</label>
+                            <input type="text" name="nama" id="nama" value="" class="form-control  @error('nama') is-invalid @enderror" autofocus >
+                            <span class="text-muted" style="font-size: 12px">Masukkan Nama Pengguna</span>
+                            @if ($errors->has('nama'))
+                                <div class="invalid-feedback">
+                                {{ $errors->first('nama') }}
+                                </div>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input type="text" name="username" id="username" value="" class="form-control  @error('username') is-invalid @enderror" autofocus >
+                            <span class="text-muted" style="font-size: 12px">Masukkan Username anda</span>
+                            @if ($errors->has('username'))
+                                <div class="invalid-feedback">
+                                {{ $errors->first('username') }}
+                                </div>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" name="password" id="password" value="" class="form-control  @error('password') is-invalid @enderror" autofocus >
+                            <span class="text-muted" style="font-size: 12px">Masukkan Password dengan benar</span>
+                            @if ($errors->has('password'))
+                                <div class="invalid-feedback">
+                                {{ $errors->first('password') }}
+                                </div>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <label>Alamat</label>
+                            <textarea name="alamat" id="alamat" class="form-control @error('nama') is-invalid @enderror" cols="0" rows="10"></textarea>
+                            <span class="text-muted" style="font-size: 12px">Masukkan Alamat dengan benar</span>
+                            @if ($errors->has('nama'))
+                                <div class="invalid-feedback">
+                                {{ $errors->first('nama') }}
+                                </div>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <label>No. Handphone</label>
+                            <input type="number" name="no_hp" id="no_hp" value="" class="form-control  @error('no_hp') is-invalid @enderror" autofocus >
+                            <span class="text-muted" style="font-size: 12px">Masukkan No. Handphone dengan benar</span>
+                            @if ($errors->has('no_hp'))
+                                <div class="invalid-feedback">
+                                {{ $errors->first('no_hp') }}
+                                </div>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="email" id="email" value="" class="form-control  @error('email') is-invalid @enderror">
+                            <span class="text-muted" style="font-size: 12px">Masukkan email dengan benar</span>
+                            @if ($errors->has('email'))
+                                <div class="invalid-feedback">
+                                {{ $errors->first('email') }}
+                                </div>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <label>Level Akses</label>
+                            <select id="level" name="level" class="form-control form-control-line @error('level') is-invalid @enderror">
+                                <option value="0">Pilih Level Anda</option>
+                                <option value="super_admin">Super Admin</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                            @if ($errors->has('level'))
+                                <span class="badge badge-danger">{{ $errors->first('level') }}</span>
+                            @endif
+                        </div>
+                        {{-- <div class="form-group">
+                            <label>Content</label>
+                            <textarea class="summernote-simple"></textarea>
+                        </div> --}}
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary" type="submit">Simpan</button>
+                        <button type="reset" class="btn btn-outline-secondary">Reset</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+@endsection
+{{-- <div id="page-wrapper">
     <div class="container-fluid">
         <div class="row bg-title">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
@@ -93,4 +195,4 @@
     </div>
     <!-- /.container-fluid -->
     <footer class="footer text-center"> 2017 &copy; Ample Admin brought to you by wrappixel.com </footer>
-</div>
+</div> --}}
