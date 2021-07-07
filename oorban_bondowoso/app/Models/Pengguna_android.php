@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Pengguna_android extends Model
 {
     use HasFactory;
+    protected $table ='pengguna_android';
 }

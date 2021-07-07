@@ -34,6 +34,9 @@ Route::middleware(['auth'])->group(function (){
         Route::resource('pengguna', backend\PenggunaController::class, ['names' =>[
             'index' => 'pengguna'
         ]]);
+        Route::resource('user-android', backend\UserAndroidController::class, ['names' =>[
+            'index' => 'user-android'
+        ]]);
         //route properti
         Route::resource('properti', backend\PropertiController::class, ['names' =>[
             'index' => 'properti'

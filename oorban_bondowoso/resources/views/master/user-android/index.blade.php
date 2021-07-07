@@ -33,41 +33,46 @@
       <div class="row">
         <div class="col-lg-12 col-md-12 col-12 col-sm-12">
             <div class="card">
+              {{-- <div class="card-header">
+                <div class="float-right">
+                  <a href=" {{ route('pengguna.create') }} " class="btn btn-primary">Tambah Data</a>
+                </div>
+              </div> --}}
               <div class="card-body">
                 <div class="table-responsive">
                   <table class="table table-striped">
                     <thead>
                       <tr>
                         <th>#</th>
-                        <th>Gambar</th>
-                        <th>Nama Properti</th>
-                        <th>Harga</th>
-                        <th>Keterangan</th>
-                        <th>Sertifikat</th>
+                        <th>Nama Lengkap</th>
+                        <th>Username</th>
+                        <th>Alamat</th>
+                        <th>NIK</th>
+                        <th>No. HP</th>
+                        <th>Email</th>
+                        <th>Scan KTP</th>
                         <th>Aksi</th>
                       </tr>
                     </thead>
                     <tbody>
-                    {{-- @foreach ($detail_properti as $item)
+                    @foreach ($user_android as $item)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
+                        <td>{{ $item->name }}</td>
+                        <td>{{ $item->username }}</td>
+                        <td>{{ $item->alamat }}</td>
+                        <td>{{ $item->no_hp }}</td>
+                        <td>{{ $item->email }}</td>
+                        <td>{{ $item->level == 'super_admin' ? 'Super Admin' : 'Admin' }}</td>
                         <td>
-                            <img src="{{ url($item->gambar) }}" width="75" height="75" alt="{{ $item->nama_pemilik }}" style="object-fit:contain">
-                        </td>
-                        <td>{{ $item->nama_pemilik }}</td>
-                        <td>{{ $item->harga }}</td>
-                        <td>{{ $item->keterangan }}</td>
-                        <td>{{ $item->sertifikat }}</td>
-                        <td>
-                            <form action=" {{ route('properti.destroy', $item->id)}} " method="POST">
-                                <a class="btn btn-primary btn-action mr-1" href="{{ route('properti.edit', $item->id) }}" data-toggle="tooltip" title="Edit"><i class="ion ion-edit"></i></a>
+                            <form action=" {{ route('pengguna.destroy', $item->id)}} " method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-danger btn-action" data-toggle="tooltip" title="Delete"><i class="ion ion-trash-b"></i></button>
                             </form>
                         </td>
                     </tr>
-                    @endforeach --}}
+                    @endforeach
                     </tbody>
                   </table>
                 </div>

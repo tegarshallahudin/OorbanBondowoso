@@ -15,7 +15,7 @@
             </div>
             <div class="card-wrap">
               <div class="card-header">
-                <h4>Total Pengguna</h4>
+                <h4>Total Admin</h4>
               </div>
               <div class="card-body">
                 10
@@ -23,6 +23,21 @@
             </div>
           </div>
         </div>
+        <div class="col-lg-4 col-md-6 col-12">
+            <div class="card card-sm-3">
+              <div class="card-icon bg-secondary">
+                <i class="ion ion-person"></i>
+              </div>
+              <div class="card-wrap">
+                <div class="card-header">
+                  <h4>Total User Android</h4>
+                </div>
+                <div class="card-body">
+                  10
+                </div>
+              </div>
+            </div>
+          </div>
         <div class="col-lg-4 col-md-6 col-12">
           <div class="card card-sm-3">
             <div class="card-icon bg-danger">

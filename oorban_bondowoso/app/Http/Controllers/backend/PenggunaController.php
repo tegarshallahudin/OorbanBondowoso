@@ -18,7 +18,7 @@ class PenggunaController extends Controller
     public function index()
     {
         $pengguna = User::all();
-        $this->param['title'] = 'Pengguna';
+        $this->param['title'] = 'Pengguna Admin';
         return view('master.pengguna.index', $this->param)->with('pengguna', $pengguna);
     }
 

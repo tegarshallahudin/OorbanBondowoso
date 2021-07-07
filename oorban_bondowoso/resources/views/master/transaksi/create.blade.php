@@ -23,6 +23,22 @@
                             </select>
                         </div>
                         <div class="form-group">
+                            <label for="">Nama Pengguna Android</label>
+                            <select name="id_properti" id="id_properti" class="selectpicker form-control" data-live-search="true">
+                                @foreach ($data_properti as $item)
+                                    <option value=""> {{ $item->nama_pemilik }} </option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Nama Super Admin/Admin</label>
+                            <select name="id_properti" id="id_properti" class="selectpicker form-control" data-live-search="true">
+                                @foreach ($data_properti as $item)
+                                    <option value=""> {{ $item->nama_pemilik }} </option>
+                                @endforeach
+                            </select>
+                        </div>
+                        {{-- <div class="form-group">
                             <label>Nama Properti</label>
                             <input type="text" name="nama" id="nama" value="" class="form-control  @error('nama') is-invalid @enderror" autofocus >
                             <span class="text-muted" style="font-size: 12px">Masukkan Nama Properti</span>
@@ -31,9 +47,9 @@
                                 {{ $errors->first('nama') }}
                                 </div>
                             @endif
-                        </div>
+                        </div> --}}
                         <div class="form-group">
-                            <label>Harga</label>
+                            <label>Total Bayar</label>
                             <input type="number" name="harga" id="harga" value="" class="form-control  @error('harga') is-invalid @enderror" autofocus >
                             <span class="text-muted" style="font-size: 12px">Exp : 120000</span>
                             @if ($errors->has('harga'))
@@ -43,6 +59,16 @@
                             @endif
                         </div>
                         <div class="form-group">
+                            <label>Kembalian</label>
+                            <input type="number" name="harga" id="harga" value="" class="form-control  @error('harga') is-invalid @enderror" autofocus >
+                            <span class="text-muted" style="font-size: 12px">Exp : 120000</span>
+                            @if ($errors->has('harga'))
+                                <div class="invalid-feedback">
+                                {{ $errors->first('harga') }}
+                                </div>
+                            @endif
+                        </div>
+                        {{-- <div class="form-group">
                             <label>Umur Bangunan</label>
                             <input type="text" name="umurbangunan" id="umurbangunan" value="" class="form-control  @error('umurbangunan') is-invalid @enderror" autofocus >
                             <span class="text-muted" style="font-size: 12px">Exp : 2 Bulan / 4 Tahun</span>
@@ -138,7 +164,7 @@
                                 @error('sertifikat')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
-                            </div>
+                            </div> --}}
                         </div>
                         {{-- <div class="form-group">
                             <label>Content</label>
