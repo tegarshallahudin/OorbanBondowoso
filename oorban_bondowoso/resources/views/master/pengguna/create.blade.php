@@ -16,8 +16,8 @@
                         <div class="card-body">
                         <div class="form-group">
                             <label>Nama Pengguna</label>
-                            <input type="text" name="nama" id="nama" value="" class="form-control  @error('nama') is-invalid @enderror" autofocus >
-                            <span class="text-muted" style="font-size: 12px">Masukkan Nama Pengguna</span>
+                            <input type="text" name="nama" id="nama" value="{{ old('nama') }}" class="form-control  @error('nama') is-invalid @enderror" autofocus >
+                            <span class="text-muted" style="font-size: 12px">Ex : Rina Pandu Winata</span>
                             @if ($errors->has('nama'))
                                 <div class="invalid-feedback">
                                 {{ $errors->first('nama') }}
@@ -26,8 +26,8 @@
                         </div>
                         <div class="form-group">
                             <label>Username</label>
-                            <input type="text" name="username" id="username" value="" class="form-control  @error('username') is-invalid @enderror" autofocus >
-                            <span class="text-muted" style="font-size: 12px">Masukkan Username anda</span>
+                            <input type="text" name="username" id="username" value="{{ old('username') }}" class="form-control  @error('username') is-invalid @enderror" autofocus >
+                            <span class="text-muted" style="font-size: 12px">Ex : rinapandu</span>
                             @if ($errors->has('username'))
                                 <div class="invalid-feedback">
                                 {{ $errors->first('username') }}
@@ -37,7 +37,7 @@
                         <div class="form-group">
                             <label>Password</label>
                             <input type="password" name="password" id="password" value="" class="form-control  @error('password') is-invalid @enderror" autofocus >
-                            <span class="text-muted" style="font-size: 12px">Masukkan Password dengan benar</span>
+                            <span class="text-muted" style="font-size: 12px">Ex : rina12345</span>
                             @if ($errors->has('password'))
                                 <div class="invalid-feedback">
                                 {{ $errors->first('password') }}
@@ -46,9 +46,9 @@
                         </div>
                         <div class="form-group">
                             <label>Alamat</label>
-                            <textarea name="alamat" id="alamat" class="form-control @error('nama') is-invalid @enderror" cols="0" rows="10"></textarea>
-                            <span class="text-muted" style="font-size: 12px">Masukkan Alamat dengan benar</span>
-                            @if ($errors->has('nama'))
+                            <textarea name="alamat" id="alamat" class="form-control @error('alamat') is-invalid @enderror" cols="0" rows="10">{{ old('alamat') }}</textarea>
+                            <span class="text-muted" style="font-size: 12px">Ex : Jln. Mawar No. 21, Bondowoso</span>
+                            @if ($errors->has('alamat'))
                                 <div class="invalid-feedback">
                                 {{ $errors->first('nama') }}
                                 </div>
@@ -56,8 +56,8 @@
                         </div>
                         <div class="form-group">
                             <label>No. Handphone</label>
-                            <input type="number" name="no_hp" id="no_hp" value="" class="form-control  @error('no_hp') is-invalid @enderror" autofocus >
-                            <span class="text-muted" style="font-size: 12px">Masukkan No. Handphone dengan benar</span>
+                            <input type="number" name="no_hp" id="no_hp" value="{{ old('no_hp') }}" class="form-control  @error('no_hp') is-invalid @enderror" autofocus >
+                            <span class="text-muted" style="font-size: 12px">Ex : 085724552412</span>
                             @if ($errors->has('no_hp'))
                                 <div class="invalid-feedback">
                                 {{ $errors->first('no_hp') }}
@@ -66,8 +66,8 @@
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" name="email" id="email" value="" class="form-control  @error('email') is-invalid @enderror">
-                            <span class="text-muted" style="font-size: 12px">Masukkan email dengan benar</span>
+                            <input type="email" name="email" id="email" value="{{ old('email') }}" class="form-control  @error('email') is-invalid @enderror">
+                            <span class="text-muted" style="font-size: 12px">Ex : Example@gmail.com</span>
                             @if ($errors->has('email'))
                                 <div class="invalid-feedback">
                                 {{ $errors->first('email') }}

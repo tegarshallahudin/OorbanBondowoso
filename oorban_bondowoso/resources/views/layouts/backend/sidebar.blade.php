@@ -7,7 +7,7 @@
         <div class="user-name pb-2"> <i class="fa fa-user mr-2"></i> <strong style="text-transform: uppercase">{{ Auth::user()->name }}</strong></div>
         <div class="sidebar-user-details">
           <div class="user-role">
-            @if ( Auth::user()->level = 'super_admin')
+            @if ( Auth::user()->level == 'super_admin')
                 Super Admin
             @else
                 Admin
@@ -20,7 +20,7 @@
         <li class="active">
           <a href=" {{ route('dashboard') }} "><i class="ion ion-speedometer"></i><span>Dashboard</span></a>
         </li>
-        @if ( Auth::user()->level = 'super_admin' )
+        @if ( Auth::user()->level == 'super_admin' )
         <li class="menu-header">Super Admin</li>
         <li class="">
             <div class="list-group">

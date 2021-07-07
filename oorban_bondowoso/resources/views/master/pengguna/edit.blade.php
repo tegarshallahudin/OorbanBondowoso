@@ -18,7 +18,7 @@
                         <div class="card-body">
                         <div class="form-group">
                             <label>Nama Pengguna</label>
-                            <input type="text" name="nama" id="nama" value=" {{ $pengguna->name }} " class="form-control  @error('nama') is-invalid @enderror" autofocus >
+                            <input type="text" name="nama" id="nama" value="{{ old('nama', $pengguna->name) }}" class="form-control  @error('nama') is-invalid @enderror" autofocus >
                             <span class="text-muted" style="font-size: 12px">Masukkan Nama Pengguna</span>
                             @if ($errors->has('nama'))
                                 <div class="invalid-feedback">
@@ -28,7 +28,7 @@
                         </div>
                         <div class="form-group">
                             <label>Username</label>
-                            <input type="text" name="username" id="username" value="{{ $pengguna->username }}" class="form-control  @error('username') is-invalid @enderror" autofocus >
+                            <input type="text" name="username" id="username" value="{{ old('username', $pengguna->username) }}" class="form-control  @error('username') is-invalid @enderror" autofocus >
                             <span class="text-muted" style="font-size: 12px">Masukkan Username anda</span>
                             @if ($errors->has('username'))
                                 <div class="invalid-feedback">
@@ -45,7 +45,7 @@
                         </div>
                         <div class="form-group">
                             <label>Alamat</label>
-                            <textarea name="alamat" id="alamat" class="form-control @error('alamat') is-invalid @enderror" cols="0" rows="10"> {{ $pengguna->alamat }} </textarea>
+                            <textarea name="alamat" id="alamat" class="form-control @error('alamat') is-invalid @enderror" cols="0" rows="10"> {{ old('alamat', $pengguna->alamat) }} </textarea>
                             <span class="text-muted" style="font-size: 12px">Masukkan Alamat dengan benar</span>
                             @if ($errors->has('alamat'))
                                 <div class="invalid-feedback">
@@ -55,7 +55,7 @@
                         </div>
                         <div class="form-group">
                             <label>No. Handphone</label>
-                            <input type="text" name="no_hp" id="no_hp" value=" {{ $pengguna->no_hp }} " class="form-control  @error('no_hp') is-invalid @enderror" autofocus >
+                            <input type="text" name="no_hp" id="no_hp" value=" {{ old('no_hp', $pengguna->no_hp) }} " class="form-control  @error('no_hp') is-invalid @enderror" autofocus >
                             <span class="text-muted" style="font-size: 12px">Masukkan No. Handphone dengan benar</span>
                             @if ($errors->has('no_hp'))
                                 <div class="invalid-feedback">
@@ -65,7 +65,7 @@
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" name="email" id="email" value=" {{ $pengguna->email }} " class="form-control  @error('email') is-invalid @enderror">
+                            <input type="email" name="email" id="email" value=" {{ old('email', $pengguna->email) }} " class="form-control  @error('email') is-invalid @enderror">
                             <span class="text-muted" style="font-size: 12px">Masukkan email dengan benar</span>
                             @if ($errors->has('email'))
                                 <div class="invalid-feedback">

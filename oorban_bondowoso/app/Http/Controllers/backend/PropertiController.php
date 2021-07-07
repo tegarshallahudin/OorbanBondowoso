@@ -42,6 +42,36 @@ class PropertiController extends Controller
      */
     public function store(Request $request)
     {
+        // validate
+        $request->validate([
+            'nama' => 'required',
+            'harga' => 'required',
+            'umurbangunan' => 'required',
+            'jumlahkamarmandi' => 'required',
+            'jumlahkamartidur' => 'required',
+            'luastanah' => 'required',
+            'luasbangunan' => 'required',
+            'lantai' => 'required',
+            'dayalistrik' => 'required',
+            'tahundibangun' => 'required',
+            'keterangan' => 'required',
+            'sertifikat' => 'required'
+
+        ], [
+            'nama.required' => 'Nama tidak boleh kosong',
+            'harga.required' => 'Harga tidak boleh kosong',
+            'umurbangunan.required' => 'Umur bangunan tidak boleh kosong',
+            'jumlahkamarmandi.required' => 'Jumlah kamar mandi tidak boleh kosong',
+            'jumlahkamartidur.required' => 'Jumlah kamar tidur tidak boleh kosong',
+            'luastanah.required' => 'Luas tanah tidak boleh kosong',
+            'luasbangunan.required' => 'Luas bangunan tidak boleh kosong',
+            'lantai.required' => 'Lantai tidak boleh kosong',
+            'dayalistrik.required' => 'Daya listrik tidak boleh kosong',
+            'tahundibangun.required' => 'Tahun dibangun tidak boleh kosong',
+            'keterangan.required' => 'Keternangan tidak boleh kosong',
+            'sertifikat.required' => 'Sertifikat harus dipilih'
+        ]);
+
         // dd($request->gambar);
         try{
             $properti= new Detail_properti;

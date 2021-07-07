@@ -41,6 +41,23 @@ class PenggunaController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nama' => 'required',
+            'username' => 'required',
+            'password' => 'required',
+            'alamat' => 'required',
+            'no_hp' => 'required',
+            'email' => 'required',
+            'password' => 'required'
+        ], [
+            'nama.required' => 'Nama lengkap tidak boleh kosong',
+            'username.required' => 'Username tidak boleh kosong',
+            'password.required' => 'Password tidak boleh kosong',
+            'alamat.required' => 'Alamat tidak boleh kosong',
+            'no_hp.required' => 'No. Handphone tidak boleh kosong',
+            'email.required' => 'Email tidak boleh kosong'
+        ]);
+
         $pengguna= new User;
         $pengguna->name=$request->get('nama');
         $pengguna->username=$request->get('username');
@@ -88,13 +105,19 @@ class PenggunaController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'password' => 'required'
-        ],
-        [
-            'required' => ':attribute Harus Terisi',
-        ],
-        [
-            'password' => 'Password Pengguna'
+            'nama' => 'required',
+            'username' => 'required',
+            'password' => 'required',
+            'alamat' => 'required',
+            'no_hp' => 'required',
+            'email' => 'required',
+        ], [
+            'nama.required' => 'Nama lengkap tidak boleh kosong',
+            'username.required' => 'Username tidak boleh kosong',
+            'password.required' => 'Password tidak boleh kosong',
+            'alamat.required' => 'Alamat tidak boleh kosong',
+            'no_hp.required' => 'No. Handphone tidak boleh kosong',
+            'email.required' => 'Email tidak boleh kosong'
         ]);
         // $data = "Data";
         // if ($request->password == null) {

@@ -16,8 +16,8 @@
                         <div class="card-body">
                         <div class="form-group">
                             <label>Nama Properti</label>
-                            <input type="text" name="nama" id="nama" value="" class="form-control  @error('nama') is-invalid @enderror" autofocus >
-                            <span class="text-muted" style="font-size: 12px">Masukkan Nama Properti</span>
+                            <input type="text" name="nama" id="nama" value="{{ old('nama') }}" class="form-control  @error('nama') is-invalid @enderror" autofocus >
+                            <span class="text-muted" style="font-size: 12px">Ex : Rumah Dimas</span>
                             @if ($errors->has('nama'))
                                 <div class="invalid-feedback">
                                 {{ $errors->first('nama') }}
@@ -26,7 +26,7 @@
                         </div>
                         <div class="form-group">
                             <label>Harga</label>
-                            <input type="number" name="harga" id="harga" value="" class="form-control  @error('harga') is-invalid @enderror" autofocus >
+                            <input type="number" name="harga" id="harga" value="{{ old('harga') }}" class="form-control  @error('harga') is-invalid @enderror" autofocus >
                             <span class="text-muted" style="font-size: 12px">Exp : 120000</span>
                             @if ($errors->has('harga'))
                                 <div class="invalid-feedback">
@@ -36,7 +36,7 @@
                         </div>
                         <div class="form-group">
                             <label>Umur Bangunan</label>
-                            <input type="text" name="umurbangunan" id="umurbangunan" value="" class="form-control  @error('umurbangunan') is-invalid @enderror" autofocus >
+                            <input type="text" name="umurbangunan" id="umurbangunan" value="{{ old('umurbangunan') }}" class="form-control  @error('umurbangunan') is-invalid @enderror" autofocus >
                             <span class="text-muted" style="font-size: 12px">Exp : 2 Bulan / 4 Tahun</span>
                             @if ($errors->has('umurbangunan'))
                                 <div class="invalid-feedback">
@@ -46,8 +46,8 @@
                         </div>
                         <div class="form-group">
                             <label>Jumlah Kamar Mandi</label>
-                            <input type="text" id="jumlahkamarmandi" name="jumlahkamarmandi" value="" placeholder="Masukkan jumlah kamar mandi" class="form-control form-control-line"> </div>
-                            <span class="text-muted" style="font-size: 12px">Masukkan Alamat dengan benar</span>
+                            <input type="text" id="jumlahkamarmandi" name="jumlahkamarmandi" value="{{ old('jumlahkamarmandi') }}" class="form-control @error('jumlahkamarmandi') is-invalid @enderror" autofocus>
+                            <span class="text-muted" style="font-size: 12px">Ex : 3 kamar mandi</span>
                             @if ($errors->has('jumlahkamarmandi'))
                                 <div class="invalid-feedback">
                                 {{ $errors->first('jumlahkamarmandi') }}
@@ -55,81 +55,98 @@
                             @endif
                         </div>
                         <div class="form-group">
-                            <label class="col-md-12">Jumlah Kamar Tidur</label>
-                            <div class="col-md-12">
-                                <input type="text" id="jumlahkamartidur" name="jumlahkamartidur" value="" placeholder="Masukkan Jumlah Kamar tidur" class="form-control form-control-line"> </div>
-                                @error('jumlahkamartidur')
-                                    <p class="text-danger">{{ $message }}</p>
-                                @enderror
+                            <label>Jumlah Kamar Tidur</label>
+                            <input type="text" id="jumlahkamartidur" name="jumlahkamartidur" value="{{ old('jumlahkamartidur') }}" class="form-control @error('jumlahkamartidur') is-invalid @enderror" autofocus>
+                            <span class="text-muted" style="font-size: 12px">Ex : 3 kamar tidur</span>
+                            @if ($errors->has('jumlahkamartidur'))
+                                <div class="invalid-feedback">
+                                {{ $errors->first('jumlahkamartidur') }}
+                                </div>
+                            @endif
                         </div>
                         <div class="form-group">
-                            <label class="col-md-12">Luas Tanah</label>
-                            <div class="col-md-12">
-                                <input type="text" id="luastanah" name="luastanah" value="" placeholder="Masukkan luas tanah" class="form-control form-control-line"> </div>
-                                @error('luastanah')
-                                    <p class="text-danger">{{ $message }}</p>
-                                @enderror
+                            <label>Luas Tanah</label>
+                            <input type="text" id="luastanah" name="luastanah" value="{{ old('luastanah') }}" class="form-control @error('luastanah') is-invalid @enderror" autofocus>
+                            <span class="text-muted" style="font-size: 12px">Ex : 500m</span>
+                            @if ($errors->has('luastanah'))
+                                <div class="invalid-feedback">
+                                {{ $errors->first('luastanah') }}
+                                </div>
+                            @endif
                         </div>
                         <div class="form-group">
-                            <label class="col-md-12">Luas Bangunan</label>
-                            <div class="col-md-12">
-                                <input type="text" id="luasbangunan" name="luasbangunan" value="" placeholder="Masukkan luas bangunan" class="form-control form-control-line"> </div>
-                                @error('luasbangunan')
-                                    <p class="text-danger">{{ $message }}</p>
-                                @enderror
+                            <label>Luas Bangunan</label>
+                            <input type="text" id="luasbangunan" name="luasbangunan" value="{{ old('luasbangunan') }}" class="form-control @error('luasbangunan') is-invalid @enderror" autofocus>
+                            <span class="text-muted" style="font-size: 12px">Ex : 500m</span>
+                            @if ($errors->has('luasbangunan'))
+                                <div class="invalid-feedback">
+                                {{ $errors->first('luasbangunan') }}
+                                </div>
+                            @endif
                         </div>
                         <div class="form-group">
-                            <label class="col-md-12">Lantai</label>
-                            <div class="col-md-12">
-                                <input type="text" id="lantai" name="lantai" value="" placeholder="Masukkan jumlah lantai" class="form-control form-control-line"> </div>
-                                @error('lantai')
-                                    <p class="text-danger">{{ $message }}</p>
-                                @enderror
+                            <label>Lantai</label>
+                            <input type="text" id="lantai" name="lantai" value="{{ old('lantai') }}" class="form-control @error('lantai') is-invalid @enderror" autofocus>
+                            <span class="text-muted" style="font-size: 12px">Ex : 2 lantai</span>
+                            @if ($errors->has('lantai'))
+                                <div class="invalid-feedback">
+                                {{ $errors->first('lantai') }}
+                                </div>
+                            @endif
                         </div>
                         <div class="form-group">
-                            <label class="col-md-12">Daya Listrik</label>
-                            <div class="col-md-12">
-                                <input type="text" id="dayalistrik" name="dayalistrik" value="" placeholder="Masukkan daya listrik" class="form-control form-control-line"> </div>
-                                @error('dayalistrik')
-                                    <p class="text-danger">{{ $message }}</p>
-                                @enderror
+                            <label>Daya Listrik</label>
+                            <input type="text" id="dayalistrik" name="dayalistrik" value="{{ old('dayalistrik') }}" class="form-control @error('dayalistrik') is-invalid @enderror" autofocus>
+                            <span class="text-muted" style="font-size: 12px">Ex : 1000 watt</span>
+                            @if ($errors->has('dayalistrik'))
+                                <div class="invalid-feedback">
+                                {{ $errors->first('dayalistrik') }}
+                                </div>
+                            @endif
                         </div>
                         <div class="form-group">
-                            <label class="col-md-12">Tahun Dibangunan</label>
-                            <div class="col-md-12">
-                                <input type="text" id="tahundibangun" name="tahundibangun" value="" placeholder="Masukkan tahun bangunan" class="form-control form-control-line"> </div>
-                                @error('tahundibangun')
-                                    <p class="text-danger">{{ $message }}</p>
-                                @enderror
+                            <label>Tahun Dibangunan</label>
+                            <input type="text" id="tahundibangun" name="tahundibangun" value="{{ old('tahundibangun') }}" class="form-control @error('tahundibangun') is-invalid @enderror" autofocus>
+                            <span class="text-muted" style="font-size: 12px">Ex : 2019</span>
+                            @if ($errors->has('tahundibangun'))
+                                <div class="invalid-feedback">
+                                {{ $errors->first('tahundibangun') }}
+                                </div>
+                            @endif
                         </div>
                         <div class="form-group">
-                            <label class="col-md-12">Keterangan</label>
-                            <div class="col-md-12">
-                                <input type="text" id="keterangan" name="keterangan" value="" placeholder="Masukkan keterangan" class="form-control form-control-line"> </div>
-                                @error('keterangan')
-                                    <p class="text-danger">{{ $message }}</p>
-                                @enderror
+                            <label>Keterangan</label>
+                            <div>
+                                <textarea type="text" id="keterangan" name="keterangan"  value="{{ old('keterangan') }}" placeholder="Masukkan keterangan" class="form-control" autofocus></textarea>
+                            </div>
+                            {{-- @if ($errors->has('keterangan'))
+                                <div class="invalid-feedback">
+                                {{ $errors->first('keterangan') }}
+                                </div>
+                            @endif --}}
                         </div>
                             <div class="form-group">
-                                <label class="col-md-12">Masukkan Gambar</label>
-                                <div class="ml-4">
+                                <label>Masukkan Gambar</label>
                                 <input type="file" id="gambar" name="gambar" style="margin-left: 20px" class="form-control-file" id="exampleFormControlFile1">
-                                @error('gambar')
-                                    <p class="text-danger">{{ $message }}</p>
-                                @enderror
-                                </div>
+                                {{-- @if ($errors->has('jumlahkamarmandi'))
+                                    <div class="invalid-feedback">
+                                    {{ $errors->first('jumlahkamarmandi') }}
+                                    </div>
+                                @endif --}}
                             </div>
                         <div class="form-group">
-                            <label class="col-sm-12">Sertifikat</label>
-                            <div class="col-sm-12">
+                            <label>Sertifikat</label>
+                            <div>
                                 <select id="sertifikat" name="sertifikat" class="form-control form-control-line">
                                     <option value="shm">SHM(Sertifikat Surat Hak Milik)</option>
                                     <option value="shgb">SHGB(Sertifikat Hak Guna Bangunan )</option>
                                     <option value="ajb">AJB(Akta Jual Beli)</option>
                                 </select>
-                                @error('sertifikat')
-                                    <p class="text-danger">{{ $message }}</p>
-                                @enderror
+                                {{-- @if ($errors->has('jumlahkamarmandi'))
+                                    <div class="invalid-feedback">
+                                    {{ $errors->first('jumlahkamarmandi') }}
+                                    </div>
+                                @endif --}}
                             </div>
                         </div>
                         {{-- <div class="form-group">
