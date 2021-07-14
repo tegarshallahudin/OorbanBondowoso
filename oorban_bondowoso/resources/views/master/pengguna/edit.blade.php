@@ -15,7 +15,7 @@
                     <div class="card-header">
                     {{-- <h4>Q</h4> --}}
                         </div>
-                        <div class="card-body">
+                    <div class="card-body">
                         <div class="form-group">
                             <label>Nama Pengguna</label>
                             <input type="text" name="nama" id="nama" value="{{ old('nama', $pengguna->name) }}" class="form-control  @error('nama') is-invalid @enderror" autofocus >
