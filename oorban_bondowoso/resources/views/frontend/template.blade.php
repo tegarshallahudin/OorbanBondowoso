@@ -40,15 +40,18 @@
     <!-- ===============================================-->
     <main class="main" id="top">
       <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block navbar-klean" data-navbar-on-scroll="data-navbar-on-scroll">
-        <div class="container"><a class="navbar-brand" href="index.html"> <img class="me-3 d-inline-block" src="{{ asset('frontend/public/assets/img/gallery/logo3.png') }}" alt="" /></a>
+        <div class="container"><a class="navbar-brand" href="#home"> <img class="me-3 d-inline-block" src="{{ asset('frontend/public/assets/img/gallery/logo3.png') }}" alt="" /></a>
           <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto pt-2 pt-lg-0 font-base">
               <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link fw-medium active" aria-current="page" href="#home">Beranda</a></li>
-              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#service">Tentang Aplikasi</a></li>
+              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#feature">Informasi Aplikasi</a></li>
               <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#team">Tentang Kami</a></li>
               <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#contact">Kontak</a></li>
             </ul>
+          </div>
+          <div>
+            <button type="button" class="btn btn-light" style="background-color:#4169E1"><strong style="color: white">Download Aplikasi</strong></button>
           </div>
         </div>
       </nav>
@@ -73,7 +76,7 @@
       </section>
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="py-0" id="service">
+      <section class="py-0" id="">
         <div class="container">
           <div class="row">
             <div class="col-lg-7 col-xxl-5 mx-auto text-center py-7">
@@ -284,9 +287,9 @@
                   <h1 class="text-700">Banyak yang <span class="fw-bold">Mencari</span> sesuatu tanpa tahu <span class="fw-bold">Dimana</span> mereka melakukannya</h1>
                   <p class="mb-5 fs-0">kami memberi solusi untuk <span class="fw-bold text-primary">seluruh masyarakat Bondowoso </span><br />dengan menggunakan website ini agar maryarakat dapat lebih mudah mencari properti di daerah Bondowoso. </p>
               </div>
-              
-              
-              
+
+
+
 
               <div class="row circle-blend circle-blend-right circle-cyan">
                 <div class="col-md-4 mb-6">
@@ -327,27 +330,27 @@
                 </div>
               </div>
 
-              
+
 
 
               <!-- <div class="row flex-center g-0">
                 <div class="col-sm-6 col-lg-3 text-center">
-                  <div class="wrapper shadow-square-right"><img class="team-card-1" src="{{ asset('frontend/public/assets/img/gallery/john.png') }}" width="200" alt="..." /></div>
+                  {{-- <div class="wrapper shadow-square-right"><img class="team-card-1" src="{{ asset('frontend/public/assets/img/gallery/john.png') }}" width="200" alt="..." /></div> --}}
                   <h5 class="fw-bold mt-3 mb-1">Tegar Shallahudin Al Ayubi</h5>
                   <p>WEB Developer</p>
                 </div>
                 <div class="col-sm-6 col-lg-3 text-center">
-                  <div class="wrapper shadow-square-left"><img class="team-card-2" src="{{ asset('frontend/public/assets/img/gallery/carrey.png') }}" width="200" alt="..." /></div>
+                  {{-- <div class="wrapper shadow-square-left"><img class="team-card-2" src="{{ asset('frontend/public/assets/img/gallery/carrey.png') }}" width="200" alt="..." /></div> --}}
                   <h5 class="fw-bold mt-3 mb-1">Iphang Rere Admaja</h5>
                   <p>Android Developer</p>
                 </div>
                 <div class="col-sm-6 col-lg-3 text-center">
-                  <div class="wrapper shadow-square-right"><img class="team-card-3" src="{{ asset('frontend/public/assets/img/gallery/ray.png') }}" width="200" alt="..." /></div>
+                  {{-- <div class="wrapper shadow-square-right"><img class="team-card-3" src="{{ asset('frontend/public/assets/img/gallery/ray.png') }}" width="200" alt="..." /></div> --}}
                   <h5 class="fw-bold mt-3 mb-1">Anisa Puji</h5>
                   <p>Admin</p>
                 </div>
                 <div class="col-sm-6 col-lg-3 text-center">
-                  <div class="wrapper shadow-square-left"><img class="team-card-4" src="{{ asset('frontend/public/assets/img/gallery/austin.png') }}" width="200" alt="..." /></div>
+                  {{-- <div class="wrapper shadow-square-left"><img class="team-card-4" src="{{ asset('frontend/public/assets/img/gallery/austin.png') }}" width="200" alt="..." /></div> --}}
                   <h5 class="fw-bold mt-3 mb-1">Derby Senja Venora</h5>
                   <p>Designer</p>
                 </div>
@@ -478,7 +481,7 @@
               <h1 class="fw-bold mb-4 text-solid fs-6">Dapatkan Aplikasi Oorban Bondowoso</h1>
               <p class="mb-6 mx-xxl-11">Ayo download aplikasi <span class="fw-bold">Oorban Bondowoso  </span> agar kalian mendapatkan info lebih lanjut dan pengalaman secara langsung bersama kami, silahkan klik tombol <span class="fw-bold">Download  </span>dibawah ini</p>
               <!-- <a class="btn hover-top btn-glow btn-klean rounded-pill" href="#">Download Disini</a> -->
-              <a class="btn" style="color:white;background-color:#92D547;radius:15px 15px 15px 15px;" href="#">Download Disini</a>
+              <a class="btn" style="color:white;background-color:#4169E1;radius:15px 15px 15px 15px;" href="#">Download Disini</a>
             </div>
           </div>
         </div>
