@@ -67,12 +67,16 @@
                         <td>{{ $item->sertifikat }}</td>
                         <td><strong>{{ $item->status }}</strong></td>
                         <td>
+                            @if($item->status != 'TERJUAL')
                             <form action=" {{ route('properti.destroy', $item->id)}} " method="POST">
                                 <a class="btn btn-primary btn-action mr-1" href="{{ route('properti.edit', $item->id) }}" data-toggle="tooltip" title="Edit"><i class="ion ion-edit"></i></a>
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-danger btn-action" data-toggle="tooltip" title="Delete"><i class="ion ion-trash-b"></i></button>
                             </form>
+                            @else
+                            -
+                            @endif
                         </td>
                     </tr>
                     @endforeach

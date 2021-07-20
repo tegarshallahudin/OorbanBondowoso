@@ -18,7 +18,9 @@
                 <h4>Total Admin</h4>
               </div>
               <div class="card-body">
-                10
+                @php
+                    echo \App\Models\User::count();
+                @endphp
               </div>
             </div>
           </div>
@@ -33,7 +35,9 @@
                   <h4>Total User Android</h4>
                 </div>
                 <div class="card-body">
-                  10
+                @php
+                    echo \App\Models\Pengguna_android::count();
+                @endphp
                 </div>
               </div>
             </div>
@@ -48,7 +52,9 @@
                 <h4>Properti</h4>
               </div>
               <div class="card-body">
-                42
+                @php
+                    echo \App\Models\Detail_properti::count();
+                @endphp
               </div>
             </div>
           </div>
@@ -63,7 +69,9 @@
                 <h4>Transaksi Properti</h4>
               </div>
               <div class="card-body">
-                1,201
+                @php
+                    echo \App\Models\Tabel_transaksi::count();
+                @endphp
               </div>
             </div>
           </div>
