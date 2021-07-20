@@ -53,7 +53,7 @@
         </div>
       </nav>
       <section id="home">
-        <div class="bg-holder d-none d-md-block bg-size" style="background-image:url({{ asset('frontend/public/assets/img/illustrations/Group6.png') }});background-position:right bottom;">
+        <div class="bg-holder d-none d-md-block bg-size" style="background-image:url({{ asset('frontend/public/assets/img/illustrations/Group10.png') }});background-position:right bottom;">
         </div>
         <!--/.bg-holder-->
 
@@ -77,12 +77,12 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-7 col-xxl-5 mx-auto text-center py-7">
-              <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">Property</h5>
-              <p class="mb-0"><span class="fw-bold">Oorban Bondowoso</span> menyediakan banyak sekali jenis properti yang dapat dilihat dan dipesan oleh pengunjung, pengguna juga bisa menambahkan properti mereka ke dalam aplikasi kami.</p>
+              <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">Properti</h5>
+              <p class="mb-0"><span class="fw-bold">Oorban Bondowoso</span> menyediakan beberapa jenis properti yang dapat dicari dan dilihat oleh pengunjung.</p>
             </div>
           </div>
-          <div class="bg-holder" style="background-image:url({{ asset('frontend/public/assets/img/illustrations/service1.png') }});background-position:bottom center;background-size:contain;">
-          </div>
+          <!-- <div class="bg-holder" style="background-image:url({{ asset('frontend/public/assets/img/illustrations/service1.png') }});background-position:bottom center;background-size:contain;">
+          </div> -->
           <!--/.bg-holder-->
 
           <div class="row flex-center circle-blend circle-blend-right circle-warning">
@@ -100,10 +100,10 @@
                 </div>
                 <div class="col-md-4 mb-4">
                   <div class="card card-bg h-100 px-4 px-md-2 px-lg-3 px-xxl-4 pt-4">
-                    <div class="text-center"><img class="my-5" src="{{ asset('frontend/public/assets/img/icons/hotel.png') }}" width="100" alt="services" />
+                    <div class="text-center"><img class="my-5" src="{{ asset('frontend/public/assets/img/icons/kontrakan.png') }}" width="100" alt="services" />
                       <div class="card-body text-center text-md-start">
-                        <h6 class="fw-bold fs-1">Hotel</h6>
-                        <p class="mt-3 mb-md-0 mb-lg-3">Jenis properti yang satu ini juga penting bagi orang-orang atau masyarakat dari luar kota Bondowoso untuk memesan sebuah tempat di hotel untuk menginap ketika datang ke kota Bondowoso, misalnya seperti turis atau orang dari luar kota yang pergi berwisata di kota Bondowoso yang kaya akan tempat wisata.</p>
+                        <h6 class="fw-bold fs-1">Kontrakan</h6>
+                        <p class="mt-3 mb-md-0 mb-lg-3">Properti ini memiliki fungsi yang sama seperti rumah yang bertujuan untuk ditinggali, hanya saja properti ini tidak untuk dijual tetapi hanya untuk disewakan kepada orang yang ingin mencari tempat tinggal dalam waktu yang lama tetapi tidak hanya sebentar saja seperti saat memesan hotel, dan tentunya biaya yang dikeluarkan akan lebih murah dan hemat dalam jangka waktu panjang.</p>
                       </div>
                     </div>
                   </div>
@@ -119,12 +119,12 @@
                   </div>
                 </div>
                 <br>
-                <div class="col-md-4 mb-4">
+                <!-- <div class="col-md-4 mb-4">
                   <div class="card card-bg h-100 px-4 px-md-2 px-lg-3 px-xxl-4 pt-4">
-                    <div class="text-center"><img class="my-5" src="{{ asset('frontend/public/assets/img/icons/kontrakan.png') }}" width="100" alt="services" />
+                    <div class="text-center"><img class="my-5" src="{{ asset('frontend/public/assets/img/icons/hotel.png') }}" width="100" alt="services" />
                       <div class="card-body text-center text-md-start">
-                        <h6 class="fw-bold fs-1">Kontrakan</h6>
-                        <p class="mt-3 mb-md-0 mb-lg-3">Properti ini memiliki fungsi yang sama seperti rumah yang bertujuan untuk ditinggali, hanya saja properti ini tidak untuk dijual tetapi hanya untuk disewakan kepada orang yang ingin mencari tempat tinggal dalam waktu yang lama tetapi tidak hanya sebentar saja seperti saat memesan hotel, dan tentunya biaya yang dikeluarkan akan lebih murah dan hemat dalam jangka waktu panjang.</p>
+                        <h6 class="fw-bold fs-1">Hotel</h6>
+                        <p class="mt-3 mb-md-0 mb-lg-3">Jenis properti yang satu ini juga penting bagi orang-orang atau masyarakat dari luar kota Bondowoso untuk memesan sebuah tempat di hotel untuk menginap ketika datang ke kota Bondowoso, misalnya seperti turis atau orang dari luar kota yang pergi berwisata di kota Bondowoso yang kaya akan tempat wisata.</p>
                       </div>
                     </div>
                   </div>
@@ -148,7 +148,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -194,9 +194,9 @@
             </div>
             <div class="col-md-4 mb-6">
               <div class="text-center px-lg-3">
-                <img class="my-5" src="{{ asset('frontend/public/assets/img/illustrations/tambah-properti.png') }}" width="100" alt="services" />
-                <h5 class="mt-3 fw-bold">Tambah Properti</h5>
-                <p class="mb-md-0 px-xxl-6">Fitur ini dapat digunakan bagi pengguna yang sudah terdaftar dan memiliki akun sehingga mereka dapat menambahkan properti mereka ke dalam aplikasi.</p>
+                <img class="my-5" src="{{ asset('frontend/public/assets/img/illustrations/chat.png') }}" width="100" alt="services" />
+                <h5 class="mt-3 fw-bold">Kontak</h5>
+                <p class="mb-md-0 px-xxl-6">Pengunjung juga dapat menghubungi pemilik properti dengan fitur yang dapat mengarahkan pengunjung ke kontak pemilik properti.</p>
               </div>
             </div>
             <div class="col-md-4 mb-6">
@@ -277,7 +277,7 @@
             <div class="col-lg-6 text-center mx-auto mb-7">
 
               <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">Tentang Kami</h5>
-              <p class="mb-0"><span class="fw-bold">Oorban Bondowoso</span> merupakan salah satu penyedia jasa Penawaran dan Penjualan Properti yang berdiri sejak tahun 2021, <span class="fw-bold">Oorban Bondowoso</span> menawarkan banyak jasa dalam bidang properti. Dengan adanya website ini kami berharap dapat memudahkan masyarakat dari dalam atau luar Bondowoso sehingga dapat memudahkan ketika masyarakat mencari, membeli dan menawarkan properti <span class="fw-bold">khususnya di daerah Kabupaten Bondowoso</span>.</p>
+              <p class="mb-0"><span class="fw-bold">Oorban Bondowoso</span> merupakan salah satu penyedia jasa pencarian Properti yang berdiri sejak tahun 2021. Dengan adanya website ini kami berharap dapat memudahkan masyarakat dari dalam atau luar Bondowoso dalam mencari properti <span class="fw-bold">khususnya di daerah Kabupaten Bondowoso</span>.</p>
             </div>
             <div class="col-xxl-9">
               <div class="col-md-7 col-lg-6 py-6 text-sm-start text-center">
@@ -309,19 +309,19 @@
                 </div>
                 <div class="col-md-4 mb-6">
                   <div class="text-center px-lg-3">
-                    <h5 class="mt-3 fw-bold">Attractive</h5>
+                    <h5 class="mt-3 fw-bold">Respon</h5>
                     <p class="mb-md-0 px-xxl-6">sekitar 99.2% pengunjung puas dengan layanan dan aplikasi kami.</p>
                   </div>
                 </div>
                 <div class="col-md-4 mb-6">
                   <div class="text-center px-lg-3">
-                    <h5 class="mt-3 fw-bold">1000 user</h5>
+                    <h5 class="mt-3 fw-bold">1000 pengguna</h5>
                     <p class="mb-md-0 px-xxl-6">Sudah lebih dari 1000 orang yang menggunakan aplikasi kami.</p>
                   </div>
                 </div>
                 <div class="col-md-4 mb-6">
                   <div class="text-center px-lg-3">
-                      <h5 class="mt-3 fw-bold">1 X 24 hours</h5>
+                      <h5 class="mt-3 fw-bold">1 X 24 jam</h5>
                       <p class="mb-md-0 px-xxl-6">Kami siap melayani anda selama 24 jam setiap hari.</p>
                   </div>
                 </div>
@@ -478,7 +478,7 @@
               <h1 class="fw-bold mb-4 text-solid fs-6">Dapatkan Aplikasi Oorban Bondowoso</h1>
               <p class="mb-6 mx-xxl-11">Ayo download aplikasi <span class="fw-bold">Oorban Bondowoso  </span> agar kalian mendapatkan info lebih lanjut dan pengalaman secara langsung bersama kami, silahkan klik tombol <span class="fw-bold">Download  </span>dibawah ini</p>
               <!-- <a class="btn hover-top btn-glow btn-klean rounded-pill" href="#">Download Disini</a> -->
-              <a class="btn" style="color:white;background-color:#92D547;radius:15px 15px 15px 15px;" href="#">Download Disini</a>
+              <a class="btn" style="color:white;background-color:#0D468B;radius:15px 15px 15px 15px;" href="#">Unduh Disini</a>
             </div>
           </div>
         </div>
