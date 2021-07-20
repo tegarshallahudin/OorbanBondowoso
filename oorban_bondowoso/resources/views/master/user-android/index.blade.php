@@ -46,11 +46,9 @@
                         <th>#</th>
                         <th>Nama Lengkap</th>
                         <th>Username</th>
-                        <th>Alamat</th>
                         <th>NIK</th>
                         <th>No. HP</th>
                         <th>Email</th>
-                        <th>Scan KTP</th>
                         <th>Aksi</th>
                       </tr>
                     </thead>
@@ -58,12 +56,11 @@
                     @foreach ($user_android as $item)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $item->name }}</td>
+                        <td>{{ $item->nama_lengkap }}</td>
                         <td>{{ $item->username }}</td>
-                        <td>{{ $item->alamat }}</td>
+                        <td>{{ $item->nik }}</td>
                         <td>{{ $item->no_hp }}</td>
                         <td>{{ $item->email }}</td>
-                        <td>{{ $item->level == 'super_admin' ? 'Super Admin' : 'Admin' }}</td>
                         <td>
                             <form action=" {{ route('pengguna.destroy', $item->id)}} " method="POST">
                                 @csrf

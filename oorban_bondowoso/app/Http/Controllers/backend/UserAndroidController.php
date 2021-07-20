@@ -12,7 +12,7 @@ class UserAndroidController extends Controller
     public function index()
     {
         $this->param['title'] = 'Pengguna Android';
-        $userandroid = pengguna_android::all();
+        $userandroid = Pengguna_android::all();
         return view('master.user-android.index', $this->param)->with('user_android', $userandroid);
     }
 }

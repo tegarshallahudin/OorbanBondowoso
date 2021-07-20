@@ -238,9 +238,8 @@ class PropertiController extends Controller
                 }
             }
             else {
-                $properti = Detail_properti::findOrFail($id);
-                $properti->delete();
             }
+            $properti->delete();
             return redirect('dashboard/master/properti')->with('danger','Data berhasil dihapus');
         }
         catch(\Exception $e){

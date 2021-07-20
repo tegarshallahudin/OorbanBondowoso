@@ -18,13 +18,12 @@ class CreateTabelTransaksi extends Migration
             $table->string('kode_transaksi', 25)->unique();
             $table->bigInteger('id_properti')->unsigned();
             $table->bigInteger('id_pengguna_android')->unsigned();
-            $table->tinyInteger('id_pengguna')->unsigned();
-            $table->tinyInteger('total_bayar', false);
-            $table->tinyInteger('kembalian', false);
+            $table->bigInteger('users_id')->unsigned();
+            $table->bigInteger('total_bayar')->nullable();
             $table->timestamps();
             $table->foreign('id_properti')->references('id')->on('detail_properti');
             $table->foreign('id_pengguna_android')->references('id')->on('pengguna_android');
-            $table->foreign('id_pengguna')->references('id')->on('pengguna');
+            $table->foreign('users_id')->references('id')->on('users');
         });
     }
 

@@ -15,7 +15,7 @@ class AlterTableTransaksi extends Migration
     {
         Schema::table('tabel_transaksi', function (Blueprint $table) {
             $table->text('bukti_pembayaran')->nullable();
-            $table->dropColumn('kembalian');
+            // $table->dropColumn('kembalian');
             $table->enum('status_pembayaran', ['belum_bayar', 'sudah_bayar', 'ditolak']);
             $table->text('alasan_penolakan')->nullable();
         });
