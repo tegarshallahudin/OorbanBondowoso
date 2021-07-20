@@ -43,19 +43,19 @@
                 <div class="table-responsive">
                   <table class="table table-striped">
                     <thead>
-                      <tr>
+                      <tr class="text-center">
                         <th>Kode Transaksi</th>
                         {{-- <th>Scan KTP</th> --}}
                         <th>ID Properti</th>
                         <th>ID Pengguna Android</th>
                         <th>ID Admin</th>
                         <th>Total Pembayaran</th>
-                        <th>Aksi</th>
+                        {{-- <th>Aksi</th> --}}
                       </tr>
                     </thead>
                     <tbody>
                     @foreach ($tabel_transaksi as $item)
-                    <tr>
+                    <tr class="text-center">
                         <td>{{ $item->kode_transaksi }}</td>
                         {{-- <td>
                             <img src="{{ url($item->bukti_pembayaran) }}" width="75" height="75" alt="{{ $item->id_properti }}" style="object-fit:contain">
@@ -64,14 +64,14 @@
                         <td>{{ ucwords($item->username )}}</td>
                         <td>{{ ucwords($item->name) }}</td>
                         <td>Rp {{ number_format($item->total_bayar, 2, '.',',') }}</td>
-                        <td>
-                            <form action=" {{ route('transaksi.destroy', $item->id_transaksi)}} " method="POST">
+                        {{-- <td> --}}
+                            {{-- <form action=" {{ route('transaksi.destroy', $item->id_transaksi)}} " method="POST"> --}}
                                 {{-- <a class="btn btn-primary btn-action mr-1" href="{{ route('properti.edit', $item->id) }}" data-toggle="tooltip" title="Edit"><i class="ion ion-edit"></i></a> --}}
-                                @csrf
+                                {{-- @csrf
                                 @method('DELETE')
                                 <button class="btn btn-danger btn-action" data-toggle="tooltip" title="Delete"><i class="ion ion-trash-b"></i></button>
-                            </form>
-                        </td>
+                            </form> --}}
+                        {{-- </td> --}}
                     </tr>
                     @endforeach
                     </tbody>

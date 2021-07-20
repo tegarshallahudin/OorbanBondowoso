@@ -28,6 +28,7 @@ class CreateDetailProperti extends Migration
             $table->bigInteger('keterangan');
             $table->text('gambar');
             $table->enum('sertifikat',['SHM','SHGB','AJB']);
+            $table->enum('status',['BELUM TERJUAL','TERJUAL']);
             $table->timestamps();
         });
     }

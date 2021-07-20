@@ -46,9 +46,11 @@
                         <th>#</th>
                         <th>Nama Lengkap</th>
                         <th>Username</th>
+                        <th>Alamat</th>
                         <th>NIK</th>
                         <th>No. HP</th>
                         <th>Email</th>
+                        <th>Gender</th>
                         <th>Aksi</th>
                       </tr>
                     </thead>
@@ -58,9 +60,11 @@
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $item->nama_lengkap }}</td>
                         <td>{{ $item->username }}</td>
+                        <td>{{ $item->alamat }}</td>
                         <td>{{ $item->nik }}</td>
                         <td>{{ $item->no_hp }}</td>
                         <td>{{ $item->email }}</td>
+                        <td>{{ $item->gender }}</td>
                         <td>
                             <form action=" {{ route('pengguna.destroy', $item->id)}} " method="POST">
                                 @csrf

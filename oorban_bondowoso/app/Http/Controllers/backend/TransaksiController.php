@@ -76,7 +76,11 @@ class TransaksiController extends Controller
         $transaksi->id_pengguna_android=$request->get('id_pengguna_android');
         $transaksi->users_id=$request->get('id_pengguna');
         $transaksi->total_bayar=$request->get('harga');
+        $setAsses = Detail_properti::find($request->get('id_properti'));
+        $setAsses->status = 'TERJUAL';
+        $setAsses->save();
         $transaksi->save();
+
         return redirect('dashboard/master/transaksi')->with('success','Data berhasil di masukkan');
     }
 

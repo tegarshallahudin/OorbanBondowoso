@@ -43,27 +43,29 @@
                 <div class="table-responsive">
                   <table class="table table-striped">
                     <thead>
-                      <tr>
+                      <tr class="text-center">
                         <th>#</th>
                         <th>Gambar</th>
                         <th>Nama Properti</th>
                         <th>Harga</th>
                         <th>Keterangan</th>
                         <th>Sertifikat</th>
+                        <th>Status</th>
                         <th>Aksi</th>
                       </tr>
                     </thead>
                     <tbody>
                     @foreach ($detail_properti as $item)
-                    <tr>
+                    <tr class="text-center">
                         <td>{{ $loop->iteration }}</td>
                         <td>
                             <img src="{{ url($item->gambar) }}" width="75" height="75" alt="{{ $item->nama_pemilik }}" style="object-fit:contain">
                         </td>
                         <td>{{ $item->nama_pemilik }}</td>
-                        <td>{{ $item->harga }}</td>
+                        <td>Rp {{ number_format($item->harga, 2, '.',',') }}</td>
                         <td>{{ $item->keterangan }}</td>
                         <td>{{ $item->sertifikat }}</td>
+                        <td><strong>{{ $item->status }}</strong></td>
                         <td>
                             <form action=" {{ route('properti.destroy', $item->id)}} " method="POST">
                                 <a class="btn btn-primary btn-action mr-1" href="{{ route('properti.edit', $item->id) }}" data-toggle="tooltip" title="Edit"><i class="ion ion-edit"></i></a>
