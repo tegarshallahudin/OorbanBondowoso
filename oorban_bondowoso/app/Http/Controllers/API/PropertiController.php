@@ -11,25 +11,25 @@ class PropertiController extends Controller
     public function allProperty()
     {
         $status = null;
-        $massage = null;
+        $message = null;
         $data = null;
         try {
-            $data = Detail_properti::orderby('nama_pemilik', 'asc')->get();
+            $data = Detail_properti::where('status', '!=', 'TERJUAL')->orderBy('nama_pemilik', 'asc')->get();
             $status = 200;
-            $massage = 'Sukses';
+            $message = 'Sukses';
         }
         catch(\Exception $e) {
             $status = 400;
-            $massage = 'Gagal';
+            $message = 'Gagal';
         }
         catch(\Illuminate\Database\QueryException $e) {
             $status = 400;
-            $massage = 'Gagal';
+            $message = 'Gagal';
         }
         finally{
             $result = array(
                 'status' => $status,
-                'masssage' => $massage,
+                'message' => $message,
                 'data'  => $data
             );
             return response($result, $status);

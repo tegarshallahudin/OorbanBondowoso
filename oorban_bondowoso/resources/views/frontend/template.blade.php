@@ -67,9 +67,9 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-md-7 col-lg-6 py-6 text-sm-start text-center">
-              <h1 class="fw-bold display-4 fs-4 fs-lg-6 fs-xxl-7 text-solid"> Ayo Bergabung</h1>
+              <h1 class="fw-bold display-4 fs-4 fs-lg-6 fs-xxl-7 text-solid"><strong>Ayo Bergabung</strong></h1>
               <h1 class="text-700">Cari Properti <span class="fw-bold">Yang Anda Inginkan Disini</span></h1>
-              <p class="mb-5 fs-0">Cari properti yang anda inginkan disini, dan jadilah bagian dari <span class="fw-bold text-primary">Oorban Bondowoso </span>.<br /> Ajak sahabat, keluarga, rekan kerja untuk bergabung dengan kami di <span class="fw-bold text-primary">Oorban Bondowoso </span>. </p>
+              <p class="mb-5 fs-0">Cari properti yang anda inginkan disini, dan jadilah bagian dari <span class="fw-bold" style="color:#10215F"s>Oorban Bondowoso </span>.<br /> Ajak sahabat, keluarga, rekan kerja untuk bergabung dengan kami di <span class="fw-bold" style="color:#10215F">Oorban Bondowoso </span>. </p>
             </div>
           </div>
         </div>
