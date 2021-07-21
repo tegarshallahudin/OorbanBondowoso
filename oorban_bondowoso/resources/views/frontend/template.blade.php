@@ -245,7 +245,7 @@
           <div class="row justify-content-center">
             <div class="col-lg-6 text-center mx-auto mb-6">
               <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">Tampilan Fitur</h5>
-              <p class="mb-0">berikut adalah tampilan dari aplikasi <span class="fw-bold">Oorban Bondowoso</span> yang kami buat dengan semenarik dan sebaik mungkin</p>
+              <p class="mb-0">berikut adalah tampilan dari aplikasi <span class="fw-bold">Oorban Bondowoso</span> yang kami buat dengan semenarik dan sebaik mungkin</p> 
             </div>
             <div class="col-xxl-9">
               <div class="card project-card-bg mx-auto px-0">
