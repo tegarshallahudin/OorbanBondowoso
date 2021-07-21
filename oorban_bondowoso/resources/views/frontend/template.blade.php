@@ -251,9 +251,9 @@
               <div class="card project-card-bg mx-auto px-0">
                 <div class="card-body">
                   <div class="row align-items-center">
-                    <div class="col-12 col-md-6 col-lg-4 text-center"><img class="mb-3 mb-lg-3 img-fluid px-xl-0" src="{{ asset('frontend/public/assets/img/gallery/project-1.png') }}" width="320" alt="project" /><img class="mb-3 mb-lg-0 img-fluid px-xl-0" src="{{ asset('frontend/public/assets/img/gallery/project-2.png') }}" width="320" alt="project" /></div>
-                    <div class="col-12 col-md-6 col-lg-4 text-center"><img class="mb-3 mb-lg-3 img-fluid px-xl-0" src="{{ asset('frontend/public/assets/img/gallery/project-3.png') }}" width="320" alt="project" /><img class="mb-3 mb-lg-0 img-fluid px-xl-0" src="{{ asset('frontend/public/assets/img/gallery/project-4.png') }}" width="320" alt="project" /></div>
-                    <div class="col-12 col-md-6 col-lg-4 text-center"><img class="mb-3 mb-lg-3 img-fluid px-xl-0" src="{{ asset('frontend/public/assets/img/gallery/project-5.png') }}" width="320" alt="project" /><img class="mb-3 mb-lg-0 img-fluid px-xl-0" src="{{ asset('frontend/public/assets/img/gallery/project-6.png') }}" width="320" alt="project" /></div>
+                    <div class="col-12 col-md-6 col-lg-4 text-center"><img class="mb-3 mb-lg-3 img-fluid px-xl-0" src="{{ asset('frontend/public/assets/img/gallery/1.jpg') }}" width="320" alt="project" /><img class="mb-3 mb-lg-0 img-fluid px-xl-0" src="{{ asset('frontend/public/assets/img/gallery/2.jpg') }}" width="320" alt="project" /></div>
+                    <div class="col-12 col-md-6 col-lg-4 text-center"><img class="mb-3 mb-lg-3 img-fluid px-xl-0" src="{{ asset('frontend/public/assets/img/gallery/3.jpg') }}" width="320" alt="project" /><img class="mb-3 mb-lg-0 img-fluid px-xl-0" src="{{ asset('frontend/public/assets/img/gallery/4.jpg') }}" width="320" alt="project" /></div>
+                    <div class="col-12 col-md-6 col-lg-4 text-center"><img class="mb-3 mb-lg-3 img-fluid px-xl-0" src="{{ asset('frontend/public/assets/img/gallery/5.jpg') }}" width="320" alt="project" /><img class="mb-3 mb-lg-0 img-fluid px-xl-0" src="{{ asset('frontend/public/assets/img/gallery/6.jpg') }}" width="320" alt="project" /></div>
                   </div>
                 </div>
               </div>
