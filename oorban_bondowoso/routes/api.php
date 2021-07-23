@@ -19,6 +19,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('all-property', 'API\PropertiController@allProperty');
+Route::post('addfavorit', 'API\FavoritController@addfavorit');
+Route::post('deletefavorit', 'API\FavoritController@deletefavorit');
+Route::get('checkfavorit', 'API\FavoritController@checkfavorit');
+Route::get('listfavorit', 'API\FavoritController@listfavorit');
 Route::post('login', 'API\UserController@login');
 Route::post('register', 'API\UserController@register');
 Route::post('update', 'API\UserController@update');
