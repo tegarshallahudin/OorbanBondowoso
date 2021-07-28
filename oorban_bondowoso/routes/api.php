@@ -26,3 +26,5 @@ Route::get('listfavorit', 'API\FavoritController@listfavorit');
 Route::post('login', 'API\UserController@login');
 Route::post('register', 'API\UserController@register');
 Route::post('update', 'API\UserController@update');
+Route::get('searchproperty', 'API\PropertiController@seacrhProperty');
+Route::get('riwayattransaksi', 'API\RiwayatController@riwayat');

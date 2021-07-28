@@ -195,7 +195,7 @@ class PropertiController extends Controller
             $properti->tahun_dibangun=$request->get('tahundibangun');
             $properti->keterangan=$request->get('keterangan');
             $properti->sertifikat=$request->get('sertifikat');
-            $properti->status=$request->get('status');
+            // $properti->status=$request->get('status');
             if($request->file('gambar') !=null){
                 $folder = 'backend/upload/properti';
                 $file = $request->file('gambar');

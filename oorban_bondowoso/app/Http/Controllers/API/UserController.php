@@ -88,7 +88,6 @@ class UserController extends Controller
             $data->email=$request->get('email');
             $data->gender=$request->get('gender');
             $data->password=$request->get('password');
-            $data->scan_ktp=$request->get('scan_ktp');
 
             $data->save();
             $massage = 'Sukses';
@@ -106,6 +105,7 @@ class UserController extends Controller
             $result = array(
                 'status' => $status,
                 'masssage' => $massage,
+                'data' => $data
             );
             return response($result, $status);
         }

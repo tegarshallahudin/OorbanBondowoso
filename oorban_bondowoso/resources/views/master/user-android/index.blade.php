@@ -66,7 +66,7 @@
                         <td>{{ $item->email }}</td>
                         <td>{{ $item->gender }}</td>
                         <td>
-                            <form action=" {{ route('pengguna.destroy', $item->id)}} " method="POST">
+                            <form action=" {{ route('user-android.destroy', $item->id)}} " method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-danger btn-action" data-toggle="tooltip" title="Delete"><i class="ion ion-trash-b"></i></button>
